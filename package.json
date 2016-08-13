@@ -1,0 +1,15 @@
+{
+  "private": true,
+  "name": "css-equal-height-columns",
+  "scripts": {
+    "start": "browser-sync start --server --files *.html"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "browser-sync": "^2.14.0"
+  },
+  "dependencies": {
+    "jquery": "^3.1.0",
+    "jquery-match-height": "^0.7.0"
+  }
+}
