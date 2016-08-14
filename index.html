@@ -4,78 +4,7 @@
         <meta charset="UTF-8"/>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>css equal height columns</title>
-        <style>
-         html {
-             box-sizing: border-box;
-             font-size: 14px;
-         }
-
-         *, *:before, *:after {
-             box-sizing: inherit;
-         }
-
-         body {
-             font-family: Helvetica;
-             width: 80%;
-             margin: 2rem auto;
-             padding: 1rem;
-             min-height: 70vh;
-         }
-
-
-         h1 {
-             text-align: center;
-             color: #333
-         }
-
-         .clearfix {
-             content: "";
-             display: table;
-             clear: both;
-         }
-
-         .container {
-             width: 100%;
-             padding: 1em;
-             margin: 0 auto;
-             border: 1px solid #222;
-         }
-
-         .col {
-             float: left;
-             width: 100%;
-             padding: 2em;
-             margin-bottom: 8px;
-             margin-right: 8px;
-             border: 1px solid #333;
-             background-color: rgba(255,225,100,0.3);
-             box-shadow: 0 2px 0 rgba(0,0,0,0.2);
-             cursor: pointer;
-             filter: grayscale(100%);
-             -webkit-filter: grayscale(100%);
-         }
-
-         .col:nth-child(3n) {
-             margin-bottom: 0;
-             margin-right: 0;
-         }
-
-         .col:hover {
-             filter: grayscale(0);
-             -webkit-filter: grayscale(0);
-         }
-
-         @media only screen and (min-width: 800px)  {
-             html {
-              font-size: 1.1em;
-             }
-
-             .col {
-                 width: calc((100% - 8px * 2) / 3);
-             }
-         }
-
-        </style>
+        <link rel="stylesheet" href="./style.min.css">
     </head>
     <body>
         <h1>css equal height columns</h1>
@@ -95,14 +24,6 @@
             <div class="col col-5">Fringilla phasellus faucibus?</div>
             <div class="col col-6">Fringilla phasellus faucibus?</div>
         </div>
-        <script src="./node_modules/jquery/dist/jquery.min.js"></script>
-        <script src="./node_modules/jquery-match-height/jquery.matchHeight-min.js"></script>
-        <script>
-         $(function() {
-             $('.col').matchHeight({
-                 byRow: false
-             });
-         });
-        </script>
     </body>
+    <script src="./script.min.js"></script>
 </html>
