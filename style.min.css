@@ -1,11 +1,4 @@
-html {
-    box-sizing: border-box;
-    font-size: 14px;
-}
-
-*, *:before, *:after {
-    box-sizing: inherit;
-}
+@import url("./node_modules/minireset.css/minireset.css");
 
 body {
     font-family: Helvetica;
@@ -17,6 +10,9 @@ body {
 
 
 h1 {
+    font-size: 1.6em;
+    font-weight: 600;
+    margin-bottom: 1em;
     text-align: center;
     color: #333
 }
@@ -48,22 +44,30 @@ h1 {
     -webkit-filter: grayscale(100%);
 }
 
-.col:nth-child(3n) {
-    margin-bottom: 0;
-    margin-right: 0;
-}
-
 .col:hover {
     filter: grayscale(0);
     -webkit-filter: grayscale(0);
 }
 
-@media only screen and (min-width: 800px)  {
-    html {
-        font-size: 1.1em;
+@media only screen and (min-width: 580px) and (max-width: 980px) {
+    .col {
+        width: calc((100% - 8px) / 2)
     }
 
+    .col:nth-child(2n) {
+        margin-bottom: 0;
+        margin-right: 0;
+    }
+}
+
+@media only screen and (min-width: 980px)  {
     .col {
         width: calc((100% - 8px * 2) / 3);
+
+    }
+
+    .col:nth-child(3n) {
+        margin-bottom: 0;
+        margin-right: 0;
     }
 }
