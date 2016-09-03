@@ -5,7 +5,7 @@
     "serve": "browser-sync start --server --files *.html *.min.js *.min.css",
     "script": "browserify -e ./script.js -o script.min.js",
     "watch:script": "onchange -i script.js -- npm run script",
-    "style": "postcss --use autoprefixer ./style.css -o style.min.css",
+    "style": "lessc --clean-css ./style.less ./styles.min.css && postcss --use autoprefixer ./style.min.css -o style.min.css",
     "watch:style": "onchange -i style.css -- npm run style",
     "start": "npm-run-all -p serve watch:script watch:style"
   },
@@ -14,6 +14,8 @@
     "autoprefixer": "^6.4.0",
     "browser-sync": "^2.14.0",
     "browserify": "^13.1.0",
+    "less": "^2.7.1",
+    "less-plugin-clean-css": "^1.5.1",
     "npm-run-all": "^2.3.0",
     "onchange": "^2.5.0",
     "postcss-cli": "^2.5.2"
